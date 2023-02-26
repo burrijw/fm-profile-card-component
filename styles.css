@@ -79,6 +79,7 @@ main {
   animation: 12s infinite linear both rotate;
 }
 
+/* Rotate animation */
 @keyframes rotate {
   from {
     rotate: 0deg;
@@ -88,8 +89,6 @@ main {
     rotate: 360deg;
   }
 }
-
-
 
 .profile-picture {
   width: 6.625rem;

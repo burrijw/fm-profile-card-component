@@ -1,0 +1,132 @@
+:root {
+  --clr-teal: hsl(185, 75%, 39%);
+  --clr-blue-gray-800: #2e3349;
+  --clr-blue-gray-500: #6b7082;
+  --clr-gray-100: #e8e9ec;
+  --clr-gray: #969696;
+  --clr-white: #ffffff;
+
+  --fs-sm: 0.625rem;
+  --fs-base: 0.875rem;
+  --fs-lg: 1.125rem;
+
+  --bg-circle-size: 38.75rem;
+
+  --rounded-full: 62.4375rem;
+  --rounded: 0.9375rem;
+}
+
+body {
+  background-color: var(--clr-teal);
+  font-family: "Kumbh Sans", Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--clr-blue-gray-800);
+}
+
+main {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card {
+  background-color: var(--clr-white);
+  background-image: url("./images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block-start: 5.4375rem;
+  position: relative;
+  border-radius: var(--rounded);
+}
+
+/* background circles */
+
+.card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -30rem;
+  left: -32rem;
+  z-index: -10;
+  height: var(--bg-circle-size);
+  aspect-ratio: 1 / 1;
+  background-image: url("./images/bg-pattern-top.svg");
+  background-size: contain;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -30rem;
+  right: -28rem;
+  z-index: -10;
+  height: var(--bg-circle-size);
+  aspect-ratio: 1 / 1;
+  background-image: url("./images/bg-pattern-bottom.svg");
+  background-size: contain;
+}
+
+.profile-picture {
+  width: 6.625rem;
+  aspect-ratio: 1/1;
+  margin-block-end: 1.125rem;
+  border: solid var(--clr-white) 0.3125rem;
+  border-radius: var(--rounded-full);
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: var(--fs-lg);
+}
+
+.name {
+  margin-bottom: 0.35rem;
+  font-size: var(--fs-lg);
+  font-weight: 700;
+}
+
+.age {
+  font-weight: 400;
+  color: var(--clr-blue-gray-500);
+}
+
+.location {
+  margin-block-end: 1.75rem;
+  font-size: var(--fs-base);
+  color: var(--clr-blue-gray-500);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.625rem;
+  margin: unset;
+  padding-inline: 3.25rem;
+  padding-block: 1.25rem;
+  list-style-type: none;
+  border-top: solid 1px var(--clr-gray-100);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: var(--fs-sm);
+  letter-spacing: 0.15rem;
+  color: var(--clr-blue-gray-500);
+}

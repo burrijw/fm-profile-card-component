@@ -142,9 +142,20 @@ main {
   margin: unset;
   padding: unset;
   padding-block: 1.25rem;
-  padding-inline: 2rem;
+  padding-inline: 3rem;
   list-style-type: none;
-  border-top: solid 1px var(--clr-gray-100);
+}
+
+.stats::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0px;
+  bottom: 82px;
+  width: 100%;
+  height: 1px;
+
+  background-color: var(--clr-gray-100);
 }
 
 .stat {

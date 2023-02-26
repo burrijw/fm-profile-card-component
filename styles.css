@@ -31,6 +31,7 @@ main {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding-inline: 1.5rem;
 }
 
 .card {
@@ -43,6 +44,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding-block-start: 5.4375rem;
+  width: min(100%, 350px);
   position: relative;
   border-radius: var(--rounded);
 }
@@ -124,11 +126,13 @@ main {
 
 .stats {
   display: flex;
+  min-width: 100%;
   justify-content: space-between;
   gap: 2.625rem;
   margin: unset;
-  padding-inline: 3.25rem;
+  padding: unset;
   padding-block: 1.25rem;
+  padding-inline: 2rem;
   list-style-type: none;
   border-top: solid 1px var(--clr-gray-100);
 }
